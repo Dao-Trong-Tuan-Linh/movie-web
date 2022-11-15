@@ -1,0 +1,60 @@
+﻿@model IList<Menu>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <nav class="main-nav">
+                <!-- ***** Logo Start ***** -->
+                <a href="index.html" class="logo">
+                    <img src="~/assets/images/logo.png" alt="">
+                </a>
+                <!-- ***** Logo End ***** -->
+                <!-- ***** Menu Start ***** -->
+                <ul class="nav">
+                   @foreach(var menu in Model.Where(m=>m.Levels==1).OrderBy(n=>n.MenuOrder))
+                   {
+                        var Pid = menu.MenuID;
+                        var Smenu = Model.Where(p => p.ParentID == Pid).OrderBy(p => p.MenuOrder).ToList();
+                        
+
+                        @if(Smenu.Count==0 && menu.MenuOrder==1)
+                        {
+
+                            <li><a asp-controller="Home" asp-action="Index">@menu.MenuName</a></li>
+                        }
+
+                        @if (Smenu.Count == 0 && menu.MenuOrder == 2)
+                        {
+
+                            <li><a asp-controller="TVShow" asp-action="Index">@menu.MenuName</a></li>
+                        }
+
+                        @if (Smenu.Count == 0 && menu.MenuOrder == 3)
+                        {
+
+                            <li><a href="create.html">@menu.MenuName</a></li>
+                        }
+
+                        @if (Smenu.Count == 0 && menu.MenuOrder ==4)
+                        {
+
+                            <li><a href="create.html">@menu.MenuName</a></li>
+                        }
+
+                        @if (Smenu.Count == 0 && menu.MenuOrder == 5)
+                        {
+
+                            <li><a href="create.html">@menu.MenuName</a></li>
+                        }
+                        
+                    }
+                </ul>
+                <a class='menu-trigger'>
+                    <span>Menu</span>
+                </a>
+                <!-- ***** Menu End ***** -->
+            </nav>
+        </div>
+    </div>
+</div>
+

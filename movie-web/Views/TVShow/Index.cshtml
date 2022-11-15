@@ -1,0 +1,119 @@
+﻿<div class="page-heading normal-space">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h6>Liberty NFT Market</h6>
+                <h2>View Item Details</h2>
+                <span>Home > <a href="#">Item Details</a></span>
+                <div class="buttons">
+                    <div class="main-button">
+                        <a href="explore.html">Explore Our Items</a>
+                    </div>
+                    <div class="border-button">
+                        <a href="create.html">Create Your NFT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="item-details-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-heading">
+                    <div class="line-dec"></div>
+                    <h2>Xem phim truyền hình <em>nổi tiếng</em> ngay bây giờ.</h2>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="left-image">
+                    <img src="assets/images/tvShowPage/tvshow4.jpg" alt="" style="border-radius: 20px;">
+                </div>
+            </div>
+            <div class="col-lg-5 align-self-center">
+                <h4>TRÒ CHƠI CON MỰC</h4>
+                <span class="author">
+                    <img src="assets/images/category-icon/nextflix.jpg" alt="" style="max-width: 50px; border-radius: 50%;">
+                    <h6>Hangul<br><a href="#">đạo diễn</a></h6>
+                </span>
+                <p>Trò chơi con mực là một bộ phim truyền hình Hàn Quốc do Hwang Dong-hyuk viết kịch bản và đạo diễn. Phim có sự tham gia của dàn diễn viên Lee Jung-jae, Park Hae-soo, Wi Ha-joon, Jung Ho-yeon, O Yeong-su, Heo Sung-tae, Anupam Tripathi và Kim Joo-ryoung.</p>
+                <div class="row">
+                    <div class="col-3">
+                        <span class="bid">
+                            SỐ TẬP<br><strong>9 TẬP</strong><br><em>Phát hành 17/9/2021</em>
+                        </span>
+                    </div>
+                    <div class="col-4">
+                        <span class="owner">
+                            ĐIỂM IMDB<br><strong>8.0 IMDb</strong><br><em>nổi tiếng</em>
+                        </span>
+                    </div>
+                    <div class="col-5">
+                        <span class="ends">
+                            TỔNG THỜI LƯỢNG<br><strong>495M</strong><br><em>55M/1ep</em>
+                        </span>
+                    </div>
+                </div>
+                <form action="submit">
+                    <label for="quantity-text">Danh sách:</label>
+                    <input placeholder="Xem sau" class="quantity-text pe-auto">
+                    <button type="submit" id="form-submit" class="main-button">Xem ngay</button>
+                </form>
+            </div>
+           @await Component.InvokeAsync("TvShow")
+        </div>
+    </div>
+</div>
+
+<div class="create-nft">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="section-heading">
+                    <div class="line-dec"></div>
+                    <h2>Cập nhập những bộ phim mới & hay nhất</h2>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="main-button">
+                    <a href="create.html">Xem ngay</a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="item first-item">
+                    <div class="number">
+                        <h6>1</h6>
+                    </div>
+                    <div class="icon">
+                        <img src="assets/images/icon-02.png" alt="">
+                    </div>
+                    <h4>Phim lẻ mới cập nhập</h4>
+                    <p>Phim lẻ thường gọi là phim chiếu rạp trong ngành điện ảnh hay kỹ thuật số được làm hay sẽ được cập nhập thường xuyên 24/7</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="item second-item">
+                    <div class="number">
+                        <h6>2</h6>
+                    </div>
+                    <div class="icon">
+                        <img src="assets/images/icon-04.png" alt="">
+                    </div>
+                    <h4>Phim chiếu rạp</h4>
+                    <p>Tổng hợp các phim chiếu rạp mới nhất, hay nhất mọi thời đại với chất lượng tốt nhất mà bạn có thể tìm thấy <a href="#" target="_blank" rel="nofollow">Xem ngay</a>. Bạn có thể xem phim chiếu rạp được cập nhập sớm nhất tại đây</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="item">
+                    <div class="icon">
+                        <img src="assets/images/icon-06.png" alt="">
+                    </div>
+                    <h4>Phim dài tập</h4>
+                    <p>Tổng hợp những bộ phim dài tập, bộ phim truyền hình hay nhất, được cập nhập sớm nhất. Bạn có thể <a rel="nofollow" href="#" target="_parent">Xem ngay</a>. Những bộ phim dài tập từ các quốc gia khác nhau.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

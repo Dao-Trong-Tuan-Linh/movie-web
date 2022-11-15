@@ -1,0 +1,40 @@
+﻿@using movie_web.Models;
+@model IList<TvShow>
+<div class="col-lg-12">
+    <div class="current-bid">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="mini-heading"><h4>Current Biddings Prices ( ETH )</h4></div>
+            </div>
+            <div class="col-lg-6">
+                <fieldset>
+                    <select name="Category" class="form-select" aria-label="Default select example" id="chooseCategory" onchange="this.form.click()">
+                        <option selected>Sort By: Latest</option>
+                        <option type="checkbox" name="option1" value="old">Sort By: Oldest</option>
+                        <option value="low">Sort By: Lowest</option>
+                        <option value="high">Sort By: Highest</option>
+                    </select>
+                </fieldset>
+            </div>
+            @foreach(var item in Model)
+            {
+                <div class="col-lg-4 col-md-6">
+                    <div class="item">
+                        <div class="left-img">
+                            <img style='object-fit:cover' src="@item.Image" alt="">
+                        </div>
+                        <div class="right-content">
+                            <h4>@item.Name</h4>
+                            <a href="#">Ep:@item.Ep</a>
+                            <div class="line-dec"></div>
+                            <h6>Score: <em>@item.Score</em></h6>
+                            <span class="date">@item.Time</span>
+                        </div>
+                    </div>
+                </div>
+            }
+            
+           
+        </div>
+    </div>
+</div>
