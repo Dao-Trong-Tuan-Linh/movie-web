@@ -26,6 +26,7 @@ namespace movie_web.Controllers
             if(id==null)
             {
                 return NotFound();
+
             }
             var list = _context.Films.Where(m => (m.FilmID == id) && (m.IsActive == true))
                 .ToList();
