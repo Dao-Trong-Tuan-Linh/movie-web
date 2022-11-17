@@ -15,7 +15,7 @@
                 <div class="owl-collection owl-carousel">
                     @foreach(var item in Model)
                     {
-                        string url = Functions.TitleslugGeneration("list", item.FilmName, item.FilmID);
+                        
                         <div class="item">
                             
                             <img src="@item.Image" alt="">
@@ -24,7 +24,7 @@
                                 <span class="collection">Score:<br><strong>@item.Score/10</strong></span>
                                 <span class="category">Category:<br><strong>@item.CategoryName</strong></span>
                                 <div class="main-button">
-                                    <a href="explore.html">Watch now</a>
+                                    <a href="explore">Watch now</a>
                                 </div>
                             </div>
                         </div>
