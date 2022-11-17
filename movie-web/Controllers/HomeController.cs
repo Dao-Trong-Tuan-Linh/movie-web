@@ -20,15 +20,15 @@ namespace movie_web.Controllers
             return View();
         }
 
-        [Route("/list-{slug}-{id:int}.html",Name ="Action")]
-        public IActionResult Action(int? id)
+        [Route("/list-{slug}-{id:int}.html",Name ="List")]
+        public IActionResult List(int? id)
         {
             if(id==null)
             {
                 return NotFound();
 
             }
-            var list = _context.Films.Where(m => (m.FilmID == id) && (m.IsActive == true))
+            var list = _context.Films.Where(m => (m.CategoryID == id) && (m.IsActive == true))
                 .ToList();
             if(list==null)
             {
