@@ -1,0 +1,129 @@
+﻿@model IList<movie_web.Models.Film>
+@using movie_web.Utilities;
+<div class="page-heading normal-space">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h6>Liberty NFT Market</h6>
+                <h2>View Item Details</h2>
+                <span>Home > <a href="#">Item Details</a></span>
+                <div class="buttons">
+                    <div class="main-button">
+                        <a href="explore.html">Explore Our Items</a>
+                    </div>
+                    <div class="border-button">
+                        <a href="create.html">Create Your NFT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="categories-collections">
+    <div class="container">
+        <div class="row">
+            @await Component.InvokeAsync("Category")
+            
+        </div>
+    </div>
+</div>
+
+<div class="item-details-page">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-lg-12">
+                <div class="current-bid">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="mini-heading"><h4>Current Biddings Prices ( ETH )</h4></div>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <select name="Category" class="form-select" aria-label="Default select example" id="chooseCategory" onchange="this.form.click()">
+                                    <option selected>Sort By: Latest</option>
+                                    <option type="checkbox" name="option1" value="old">Sort By: Oldest</option>
+                                    <option value="low">Sort By: Lowest</option>
+                                    <option value="high">Sort By: Highest</option>
+                                </select>
+                            </fieldset>
+                        </div>
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-lg-4 col-md-6">
+                                <div class="item">
+                                    <div class="left-img">
+                                        <img style='object-fit:cover' src="@item.Image" alt="">
+                                    </div>
+                                    <div class="right-content">
+                                        <h4>@item.FilmName</h4>
+                                        <a href="#">Watch now</a>
+                                        <div class="line-dec"></div>
+                                        <h6>Score: <em>@item.Score</em></h6>
+                                        <span class="date">@item.Date</span>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="create-nft">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="section-heading">
+                    <div class="line-dec"></div>
+                    <h2>Cập nhập những bộ phim mới & hay nhất</h2>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="main-button">
+                    <a href="create.html">Xem ngay</a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="item first-item">
+                    <div class="number">
+                        <h6>1</h6>
+                    </div>
+                    <div class="icon">
+                        <img src="assets/images/icon-02.png" alt="">
+                    </div>
+                    <h4>Phim lẻ mới cập nhập</h4>
+                    <p>Phim lẻ thường gọi là phim chiếu rạp trong ngành điện ảnh hay kỹ thuật số được làm hay sẽ được cập nhập thường xuyên 24/7</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="item second-item">
+                    <div class="number">
+                        <h6>2</h6>
+                    </div>
+                    <div class="icon">
+                        <img src="assets/images/icon-04.png" alt="">
+                    </div>
+                    <h4>Phim chiếu rạp</h4>
+                    <p>Tổng hợp các phim chiếu rạp mới nhất, hay nhất mọi thời đại với chất lượng tốt nhất mà bạn có thể tìm thấy <a href="#" target="_blank" rel="nofollow">Xem ngay</a>. Bạn có thể xem phim chiếu rạp được cập nhập sớm nhất tại đây</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="item">
+                    <div class="icon">
+                        <img src="assets/images/icon-06.png" alt="">
+                    </div>
+                    <h4>Phim dài tập</h4>
+                    <p>Tổng hợp những bộ phim dài tập, bộ phim truyền hình hay nhất, được cập nhập sớm nhất. Bạn có thể <a rel="nofollow" href="#" target="_parent">Xem ngay</a>. Những bộ phim dài tập từ các quốc gia khác nhau.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
