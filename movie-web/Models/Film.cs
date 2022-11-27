@@ -16,6 +16,7 @@ namespace movie_web.Models
         public string? CategoryName { get; set; }
         public DateTime? Date { get; set; }
         public int GenreID { get; set; }
+        public string? Details { get; set; }
 
     }
 }
